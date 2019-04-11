@@ -1,6 +1,6 @@
 #Jacy Yang's Part B: Rocket Ship
 
-height = 3
+height = 5
 
 #top of rocket function
 def pyramid():
@@ -10,7 +10,7 @@ def pyramid():
     for row in range(0, top):
         line = ""
         #determines total number of left spaces
-        leftspace = height - row + 2
+        leftspace = height * 2 - (row + 1)
         #add a space to the line as many times as leftspace
         for i in range(0, leftspace):
             line = line + " "
@@ -28,6 +28,7 @@ def pyramid():
             line = line + "\\"
         #print line
         print line
+
 #function for single line pattern
 def line():
     #start line with +
@@ -41,6 +42,7 @@ def line():
     line = line + "+"
     #print line
     print line
+
 #function for one part of the rocket body
 def top_body():
     #adds vertical line in each row per height
@@ -75,6 +77,7 @@ def top_body():
         line = line + "|"
         #prints line
         print line
+        
 #function for other half of the rocket body
 def bottom_body():
     #starts lines with vertical line
@@ -114,4 +117,5 @@ bottom_body()
 line()
 bottom_body()
 top_body()
+line()
 pyramid()
